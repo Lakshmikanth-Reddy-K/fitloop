@@ -53,16 +53,11 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# If frontend build exists, mount it
+# If frontend build exists, set up directory references
 FRONTEND_BUILD_DIR = os.path.join(os.path.dirname(__file__), 'frontend', 'dist')
-if os.path.isdir(FRONTEND_BUILD_DIR):
-    # Mount static assets at /assets (for React build)
-    assets_dir = os.path.join(FRONTEND_BUILD_DIR, 'assets')
-    if os.path.isdir(assets_dir):
-        app.mount('/assets', StaticFiles(directory=assets_dir), name='assets')
-    
-    # Mount the entire dist directory at /app for the React app
-    app.mount('/app', StaticFiles(directory=FRONTEND_BUILD_DIR, html=True), name='app')
+
+# Note: We handle React app serving through custom route handlers below
+# instead of mounting to avoid routing conflicts
 
 # Serve simple HTML frontend if React build doesn't exist
 @app.get("/simple")
@@ -265,7 +260,7 @@ ai_processor = AIProcessor()
 
 # Authentication
 def verify_token(x_auth_token: Optional[str] = Header(None)):
-    expected_token = os.getenv("AUTH_TOKEN", "changeme123")
+    expected_token = os.getenv("AUTH_TOKEN", "fitloop2024")
     if not x_auth_token or x_auth_token != expected_token:
         raise HTTPException(status_code=401, detail="Invalid authentication token")
     return True
@@ -613,6 +608,7 @@ async def export_product(
         raise HTTPException(status_code=500, detail=str(e))
 
 @app.get("/", response_class=HTMLResponse)
+@app.head("/")
 async def root():
     """Health check or redirect to UI if built."""
     if os.path.isdir(FRONTEND_BUILD_DIR):
