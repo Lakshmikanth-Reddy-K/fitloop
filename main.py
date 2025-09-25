@@ -44,11 +44,6 @@ async def simple_frontend():
         return HTMLResponse(content=content)
     except FileNotFoundError:
         return HTMLResponse(content="<h1>Simple frontend not found</h1>")
-    allow_origins=["*"],
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
 
 # Initialize AI processor
 ai_processor = AIProcessor()
