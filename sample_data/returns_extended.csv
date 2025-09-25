@@ -1,0 +1,13 @@
+product_id,return_reason_text,condition_flag,date
+P2001,Too tight waist area,good,2025-08-06
+P2001,Size runs small overall,good,2025-08-12
+P2002,Too loose silhouette,good,2025-08-07
+P2002,Baggy fit unflattering,good,2025-08-11
+P2003,Color faded badly,used,2025-08-07
+P2003,Poor color retention,used,2025-08-13
+P2004,Shrunk after wash,good,2025-08-09
+P2004,Length shrinkage issue,good,2025-08-15
+P2006,Sleeves too short,good,2025-08-11
+P2006,Sleeve length inadequate,good,2025-08-14
+P2008,Fabric pilling defect,used,2025-08-12
+P2010,Wrinkles excessively,used,2025-08-14
