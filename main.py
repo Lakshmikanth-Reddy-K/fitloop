@@ -655,6 +655,20 @@ async def serve_assets(file_path: str):
             return Response(content=content, media_type=media_type)
     raise HTTPException(status_code=404, detail="Asset not found")
 
+# React SPA routes - all should serve index.html for client-side routing
+@app.get("/app")
+@app.get("/app/{path:path}")
+async def serve_react_app(path: str = ""):
+    """Serve React SPA for all /app routes"""
+    if os.path.isdir(FRONTEND_BUILD_DIR):
+        index_path = os.path.join(FRONTEND_BUILD_DIR, 'index.html')
+        if os.path.isfile(index_path):
+            with open(index_path, 'r', encoding='utf-8') as f:
+                content = f.read()
+            return HTMLResponse(content=content)
+    # Fallback to simple frontend if React build not available
+    return HTMLResponse(content='<script>window.location.href="/simple";</script>')
+
 if __name__ == "__main__":
     import uvicorn
     uvicorn.run(app, host="0.0.0.0", port=8000)
