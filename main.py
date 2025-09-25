@@ -34,6 +34,22 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
+# Serve simple HTML frontend if React build doesn't exist
+@app.get("/simple")
+async def simple_frontend():
+    """Serve simple HTML frontend"""
+    try:
+        with open(os.path.join(os.path.dirname(__file__), 'simple-frontend.html'), 'r') as f:
+            content = f.read()
+        return HTMLResponse(content=content)
+    except FileNotFoundError:
+        return HTMLResponse(content="<h1>Simple frontend not found</h1>")
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
 # Initialize AI processor
 ai_processor = AIProcessor()
 
@@ -394,15 +410,18 @@ async def root():
         return (
             "<html><head><title>FitLoop</title></head><body>"
             "<h2>FitLoop API is running ✅</h2>"
-            "<p>Frontend is available at <a href='/app'>/app</a></p>"
+            "<p>React Frontend: <a href='/app'>/app</a></p>"
+            "<p>Simple Frontend: <a href='/simple'>/simple</a></p>"
             f"<p>AI Enabled: {ai_processor.client is not None}</p>"
             "</body></html>"
         )
     return (
         "<html><head><title>FitLoop</title></head><body>"
-        "<h2>FitLoop API is running ✅ (no built frontend detected)</h2>"
-        "<p>Build the frontend (npm run build) to serve it under /app.</p>"
+        "<h2>FitLoop API is running ✅</h2>"
+        "<p><a href='/simple' style='background: #6366f1; color: white; padding: 10px 20px; text-decoration: none; border-radius: 5px;'>🚀 Open FitLoop App</a></p>"
+        "<p>Simple HTML Frontend (no React build needed)</p>"
         f"<p>AI Enabled: {ai_processor.client is not None}</p>"
+        "<hr><p><small>API Docs: <a href='/docs'>/docs</a></small></p>"
         "</body></html>"
     )
 
