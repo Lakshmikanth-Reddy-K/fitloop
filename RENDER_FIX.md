@@ -23,7 +23,7 @@ The deployment error was caused by a missing `csv_utils` module. **Fixed by:**
    - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
    - **Environment**: `Python 3`
 3. **Environment Variables**:
-   - `AUTH_TOKEN` = `hackathon2024`
+   - `AUTH_TOKEN` = `fitloop2024`
 4. **Deploy**
 
 ---
@@ -40,7 +40,7 @@ The deployment error was caused by a missing `csv_utils` module. **Fixed by:**
 - ✅ **Backend**: `https://your-app.onrender.com` (API working)
 - ✅ **Simple Frontend**: `https://your-app.onrender.com/simple` 
 - ✅ **Demo Ready**: Upload CSVs and process data
-- ✅ **Hackathon Submission**: Public URL ready!
+- ✅ **Professional Platform**: Public URL ready!
 
 ---
 

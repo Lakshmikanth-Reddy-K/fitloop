@@ -10,7 +10,7 @@ if [ ! -d ".git" ]; then
     echo "📁 Initializing Git repository..."
     git init
     git add .
-    git commit -m "Initial FitLoop hackathon submission"
+    git commit -m "Initial FitLoop platform submission"
     git branch -M main
     echo "✅ Git repository initialized"
     echo ""
@@ -34,11 +34,11 @@ echo ""
 echo "📋 Environment Variables Needed:"
 echo "================================"
 echo "Backend (Railway):"
-echo "  AUTH_TOKEN=hackathon2024"
+echo "  AUTH_TOKEN=fitloop2024"
 echo "  OPENAI_API_KEY=your_key_here"
 echo ""
 echo "Frontend (Vercel):"
 echo "  VITE_API_BASE_URL=https://your-railway-app.railway.app"
-echo "  VITE_AUTH_TOKEN=hackathon2024"
+echo "  VITE_AUTH_TOKEN=fitloop2024"
 echo ""
 echo "🎉 Ready for deployment!"

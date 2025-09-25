@@ -14,7 +14,7 @@
    - **Build Command**: `pip install -r requirements.txt`
    - **Start Command**: `uvicorn main:app --host 0.0.0.0 --port $PORT`
 6. **Environment Variables**:
-   - `AUTH_TOKEN` = `hackathon2024`
+   - `AUTH_TOKEN` = `fitloop2024`
 7. **Click "Create Web Service"**
 
 **Result**: `https://fitloop.onrender.com` (Your public URL!)
@@ -24,11 +24,11 @@
 ## Option 2: Heroku (Classic)
 
 1. **Go to**: https://heroku.com/
-2. **Create new app**: `fitloop-hackathon`
+2. **Create new app**: `fitloop-platform`
 3. **Connect GitHub** repo
 4. **Deploy** branch `main`
 
-**Result**: `https://fitloop-hackathon.herokuapp.com`
+**Result**: `https://fitloop-platform.herokuapp.com`
 
 ---
 
@@ -56,7 +56,7 @@
 1. Visit your Render URL
 2. Upload sample CSVs from `sample_data/`
 3. Process and see results
-4. **Ready for hackathon demo!** 🏆
+4. **Ready for professional demo!** 🏆
 
 ---
 

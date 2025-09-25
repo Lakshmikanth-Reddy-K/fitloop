@@ -7,7 +7,7 @@
 1. **Create Personal Access Token**:
    - Go to: https://github.com/settings/tokens
    - Click "Generate new token" → "Generate new token (classic)"
-   - Name: "FitLoop Hackathon"
+   - Name: "FitLoop Platform"
    - Expiration: 30 days
    - Scopes: Check "repo" (full repository access)
    - Click "Generate token"
@@ -49,4 +49,4 @@ git push -u origin main
 1. ✅ Code pushed to GitHub
 2. 🚀 Deploy Backend: https://railway.app
 3. 🎨 Deploy Frontend: https://vercel.com
-4. 🎉 Get public URLs for hackathon!
+4. 🎉 Get public URLs for your platform!

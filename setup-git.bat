@@ -8,7 +8,7 @@ cd /d "C:\Users\LARED\source\repos\terraform-logiapp-demo\fitloop"
 echo Initializing Git repository...
 git init
 git add .
-git commit -m "FitLoop - TCS AI Hackathon Submission"
+git commit -m "FitLoop - Professional AI Feedback Platform"
 git branch -M main
 
 echo.

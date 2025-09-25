@@ -9,7 +9,7 @@ Your FitLoop app is ready for deployment! Follow these steps to get your public 
 - Railway account (for backend) - https://railway.app  
 - Vercel account (for frontend) - https://vercel.com
 
-Both platforms offer generous free tiers perfect for hackathons!
+Both platforms offer generous free tiers perfect for professional applications!
 
 ---
 
@@ -21,7 +21,7 @@ First, push your code to a GitHub repository:
 cd C:\Users\LARED\source\repos\terraform-logiapp-demo\fitloop
 git init
 git add .
-git commit -m "Initial FitLoop hackathon submission"
+git commit -m "Initial FitLoop platform submission"
 git branch -M main
 git remote add origin https://github.com/YOUR_USERNAME/fitloop.git
 git push -u origin main
@@ -39,7 +39,7 @@ git push -u origin main
    - **Root Directory**: Set to `/` (Railway will detect the Python app)
 4. **Environment Variables** (in Railway dashboard):
    ```
-   AUTH_TOKEN=hackathon2024
+   AUTH_TOKEN=fitloop2024
    OPENAI_API_KEY=your_key_here (optional - has fallback)
    ```
 5. **Deploy** - Railway auto-detects Python and uses your `requirements.txt`
@@ -60,7 +60,7 @@ git push -u origin main
 4. **Environment Variables**:
    ```
    VITE_API_BASE_URL=https://your-railway-app.railway.app
-   VITE_AUTH_TOKEN=hackathon2024
+   VITE_AUTH_TOKEN=fitloop2024
    ```
 5. **Deploy** - Vercel builds and deploys automatically
 
@@ -91,13 +91,13 @@ Your app includes production-ready sample data:
 
 ## 🔑 Authentication
 
-- **Token**: `hackathon2024` (set in environment variables)
+- **Token**: `fitloop2024` (set in environment variables)
 - **Frontend automatically includes** the token in requests
 - **No manual login required** - ready for demo!
 
 ---
 
-## 🏆 Hackathon Submission URLs
+## 🚀 Platform Deployment URLs
 
 After deployment, you'll have:
 

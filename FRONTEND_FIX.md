@@ -47,7 +47,7 @@ After Render redeploys (automatic from GitHub push):
 3. Visit `https://fitloop.onrender.com/app` - should show React version
 4. Both should work without 404 errors
 
-## For Hackathon Submission
+## For Professional Platform
 You now have:
 - ✅ **Public URL**: `https://fitloop.onrender.com/simple`
 - ✅ **Working Demo**: Load demo data button works

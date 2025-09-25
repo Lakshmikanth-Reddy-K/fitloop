@@ -94,7 +94,7 @@ async def simple_frontend():
         <nav class="bg-gradient-to-r from-primary to-secondary text-white p-4">
             <div class="container mx-auto">
                 <h1 class="text-2xl font-bold">FitLoop - AI Feedback Optimizer</h1>
-                <p class="text-sm opacity-90">TCS AI Hackathon Submission</p>
+                <p class="text-sm opacity-90">Professional Retail Analytics Platform</p>
             </div>
         </nav>
 
@@ -148,7 +148,7 @@ async def simple_frontend():
 
     <script>
         const API_BASE = window.location.origin;
-        const AUTH_TOKEN = 'hackathon2024';
+        const AUTH_TOKEN = 'fitloop2024';
 
         // Check API status
         async function checkAPIStatus() {

@@ -20,7 +20,7 @@ echo 4. Select your fitloop repository
 echo 5. Choose the 'fitloop' folder as root directory
 echo 6. Railway will auto-detect Python and deploy
 echo 7. Set environment variables:
-echo    - AUTH_TOKEN=hackathon2024
+echo    - AUTH_TOKEN=fitloop2024
 echo    - OPENAI_API_KEY=your_openai_key (optional)
 echo.
 echo FRONTEND DEPLOYMENT (Vercel):

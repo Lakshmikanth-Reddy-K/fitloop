@@ -1,5 +1,5 @@
 import os
-os.environ['AUTH_TOKEN'] = 'hackathon2024'
+os.environ['AUTH_TOKEN'] = 'fitloop2024'
 
 # Simple startup script for FitLoop
 if __name__ == "__main__":

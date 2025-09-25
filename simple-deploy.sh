@@ -8,7 +8,7 @@ echo "📦 Installing dependencies..."
 pip install fastapi uvicorn python-multipart sqlalchemy requests python-dotenv openai
 
 # Set environment variables
-export AUTH_TOKEN="hackathon2024"
+export AUTH_TOKEN="fitloop2024"
 export PORT=8000
 
 # Start the application
