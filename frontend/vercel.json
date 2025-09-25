@@ -5,6 +5,6 @@
   "framework": "vite",
   "env": {
     "VITE_API_BASE_URL": "https://your-railway-app.railway.app",
-    "VITE_AUTH_TOKEN": "hackathon2024"
+    "VITE_AUTH_TOKEN": "fitloop2024"
   }
 }
