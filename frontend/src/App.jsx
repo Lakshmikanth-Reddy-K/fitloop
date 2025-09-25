@@ -8,7 +8,7 @@ import ProductDetail from './pages/ProductDetail';
 
 function App() {
   return (
-    <Router>
+    <Router basename="/app">
       <div className="min-h-screen bg-gray-50">
         <Navbar />
         <main className="container mx-auto px-4 py-8">
